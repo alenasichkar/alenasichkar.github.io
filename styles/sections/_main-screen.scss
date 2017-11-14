@@ -19,10 +19,16 @@
         text-align: center;
         @media (max-width: 750px) {
             font-size: 26px;
-            margin-top: 100px;
+            margin-top: 40px;
         }
         @media (max-width: 530px) {
             font-size: 20px;
+            line-height: 24px;
+        }
+        @media (max-width: 390px) {
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 22px;
         }
     }
     &__title {
@@ -36,6 +42,12 @@
         }
         @media (max-width: 530px) {
             font-size: 34px;
+            line-height: 38px;
+        }
+        @media (max-width: 390px) {
+            font-size: 30px;
+            margin-bottom: 40px;
+            line-height: 34px;
         }
     }
     &__description {
@@ -49,6 +61,12 @@
         }
         @media (max-width: 530px) {
             font-size: 20px;
+            line-height: 24px;
+        }
+        @media (max-width: 390px) {
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 22px;
         }
     }
     &__btn {
@@ -65,6 +83,9 @@
         &:hover {
             background-color: $white;
             color: $dark-gray;
+        }
+        @media (max-width: 390px) {
+            height: 50px;
         }
     }
 }
@@ -92,24 +113,6 @@
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
-        }
-    }
-    &__logo {
-        &--part1 {
-            font-family: 'BebasNeueBook';
-            font-size: 48px;
-            color: $red;
-            @media (max-width: 400px) {
-                font-size: 36px;
-            }
-        }
-        &--part2 {
-            font-family: 'BebasNeueRegular';
-            font-size: 36px;
-            color: $red;
-            @media (max-width: 400px) {
-                font-size: 22px;
-            }
         }
     }
     &__nav {
@@ -219,34 +222,25 @@
     height: 32px;
     bottom: 30px;
     left: 50%;
-    margin-left: -16px;
+    transform: translateX(-50%);
     border: 1px solid $white;
     border-radius: 50%;
-    background-size: 14px auto;
-    opacity: 1;
-    z-index: 2;
-    // animation: custom-animate 2s infinite;
-    // -webkit-animation: bounce 2s infinite 2s;
-    // transition: all 0.2s ease-in;
-    // -webkit-transition: all 0.2s ease-in;
-    transition: all 0.3s ease-in-out;
-    animation: custom-animate 4s infinite;
-    &:before {
-        display: block;
-        content: "";
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        top: calc(50% - 8px);
-        left: calc(50% - 6px);
-        transform: rotate(-45deg);
-        border: 2px solid $white;
-        border-width: 0px 0 2px 2px;
+    // background-size: 14px auto;
+    // z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & span  {
+        color: $white;
+        transition: color 0.4s ease-in-out;
     }
     &:hover {
         border: 1px solid $red;
-        &:before {
+        & span {
             color: $red;
         }
+    }
+    @media (max-width: 390px) {
+        bottom: 20px;
     }
 }

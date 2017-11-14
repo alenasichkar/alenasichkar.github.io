@@ -128,10 +128,16 @@ main {
     @media (max-width: 750px) {
       .main-screen__subtitle {
         font-size: 26px;
-        margin-top: 100px; } }
+        margin-top: 40px; } }
     @media (max-width: 530px) {
       .main-screen__subtitle {
-        font-size: 20px; } }
+        font-size: 20px;
+        line-height: 24px; } }
+    @media (max-width: 390px) {
+      .main-screen__subtitle {
+        font-size: 18px;
+        margin-bottom: 40px;
+        line-height: 22px; } }
   .main-screen__title {
     font-family: 'Lato', sans-serif;
     font-weight: 900;
@@ -143,7 +149,13 @@ main {
         font-size: 46px; } }
     @media (max-width: 530px) {
       .main-screen__title {
-        font-size: 34px; } }
+        font-size: 34px;
+        line-height: 38px; } }
+    @media (max-width: 390px) {
+      .main-screen__title {
+        font-size: 30px;
+        margin-bottom: 40px;
+        line-height: 34px; } }
   .main-screen__description {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -155,7 +167,13 @@ main {
         font-size: 26px; } }
     @media (max-width: 530px) {
       .main-screen__description {
-        font-size: 20px; } }
+        font-size: 20px;
+        line-height: 24px; } }
+    @media (max-width: 390px) {
+      .main-screen__description {
+        font-size: 18px;
+        margin-bottom: 40px;
+        line-height: 22px; } }
   .main-screen__btn {
     font-family: 'Lato', sans-serif;
     font-weight: 900;
@@ -170,6 +188,9 @@ main {
     .main-screen__btn:hover {
       background-color: #fff;
       color: #323338; }
+    @media (max-width: 390px) {
+      .main-screen__btn {
+        height: 50px; } }
 
 .header {
   position: absolute;
@@ -193,20 +214,6 @@ main {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap; } }
-  .header__logo--part1 {
-    font-family: 'BebasNeueBook';
-    font-size: 48px;
-    color: #dc0000; }
-    @media (max-width: 400px) {
-      .header__logo--part1 {
-        font-size: 36px; } }
-  .header__logo--part2 {
-    font-family: 'BebasNeueRegular';
-    font-size: 36px;
-    color: #dc0000; }
-    @media (max-width: 400px) {
-      .header__logo--part2 {
-        font-size: 22px; } }
   .header__nav--list {
     display: flex;
     justify-content: space-between;
@@ -292,29 +299,22 @@ main {
   height: 32px;
   bottom: 30px;
   left: 50%;
-  margin-left: -16px;
+  transform: translateX(-50%);
   border: 1px solid #fff;
   border-radius: 50%;
-  background-size: 14px auto;
-  opacity: 1;
-  z-index: 2;
-  transition: all 0.3s ease-in-out;
-  animation: custom-animate 4s infinite; }
-  .scroll-down:before {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: calc(50% - 8px);
-    left: calc(50% - 6px);
-    transform: rotate(-45deg);
-    border: 2px solid #fff;
-    border-width: 0px 0 2px 2px; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .scroll-down span {
+    color: #fff;
+    transition: color 0.4s ease-in-out; }
   .scroll-down:hover {
     border: 1px solid #dc0000; }
-    .scroll-down:hover:before {
+    .scroll-down:hover span {
       color: #dc0000; }
+  @media (max-width: 390px) {
+    .scroll-down {
+      bottom: 20px; } }
 
 .latest {
   background-color: #fff; }
@@ -518,8 +518,8 @@ main {
       .trending__slider--wrapper {
         flex-direction: column; } }
   .trending__slider--img {
-    height: 573px;
-    width: 573px;
+    height: 570px;
+    width: 570px;
     margin-right: 30px;
     margin-bottom: 30px; }
     @media (max-width: 750px) {
@@ -529,7 +529,7 @@ main {
     .trending__slider--img img {
       width: 100%;
       height: 100%;
-      object-fit: cover; }
+      object-fit: contain; }
   .trending__slider--content {
     max-width: 573px; }
   .trending__slider--title {
@@ -654,7 +654,7 @@ main {
   border: 2px solid #dc0000; }
 
 .blog__container {
-  padding: 60px 15px; }
+  padding: 60px 0; }
   @media (max-width: 670px) {
     .blog__container {
       padding: 40px 15px; } }
@@ -705,7 +705,7 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 0 20px; }
+    margin: 0 15px; }
   .blog__slider--img {
     width: 100%;
     margin-bottom: 20px;
@@ -838,25 +838,24 @@ main {
         flex-direction: column; } }
     .subscribe__form--email {
       width: 770px;
-      padding: 20px 20px 20px 80px;
-      background-color: transparent;
-      background: url(./../img/email-icon.png) 30px center no-repeat;
-      color: #fff;
-      border: 1px solid #fff;
-      margin-right: 30px; }
-      @media (max-width: 660px) {
-        .subscribe__form--email {
-          padding: 15px 15px 15px 60px; } }
+      height: 60px;
+      margin-right: 30px;
+      margin-bottom: 30px; }
+      .subscribe__form--email input {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px 0 80px;
+        background-color: transparent;
+        background: url(./../img/email-icon.png) 30px center no-repeat;
+        font-size: 16px;
+        color: #fff;
+        border: 1px solid #fff; }
       @media (max-width: 500px) {
         .subscribe__form--email {
-          width: 100%;
-          margin: 0 0 30px; } }
-      @media (max-width: 350px) {
-        .subscribe__form--email {
-          width: 260px;
-          margin: 0 auto 30px; } }
+          width: 100%; } }
     .subscribe__form--btn {
       width: 270px;
+      height: 60px;
       background-color: #fff;
       color: #000000;
       font-family: 'Open Sans', sans-serif;
@@ -869,12 +868,7 @@ main {
           font-size: 16px; } }
       @media (max-width: 500px) {
         .subscribe__form--btn {
-          width: 100%;
-          height: 47px; } }
-      @media (max-width: 350px) {
-        .subscribe__form--btn {
-          width: 260px;
-          margin: 0 auto; } }
+          width: 100%; } }
       .subscribe__form--btn:hover {
         background-color: transparent;
         color: #fff; }
@@ -884,7 +878,7 @@ main {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase; }
 
 ::-moz-placeholder {
@@ -892,7 +886,7 @@ main {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase; }
 
 :-ms-input-placeholder {
@@ -900,7 +894,7 @@ main {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase; }
 
 :-moz-placeholder {
@@ -908,8 +902,12 @@ main {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase; }
+
+#map {
+  width: 100%;
+  height: 500px; }
 
 .footer {
   padding: 50px 15px;
@@ -937,6 +935,10 @@ main {
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
   z-index: 10; }
+  @media (max-width: 500px) {
+    .button-up {
+      bottom: 15px;
+      right: 15px; } }
 
 .button-up.is-visible {
   opacity: 1;

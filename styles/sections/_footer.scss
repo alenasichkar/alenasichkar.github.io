@@ -24,6 +24,10 @@
     pointer-events: none;
     @include transition(0.4s);
     z-index: 10;
+    @media (max-width: 500px) {
+        bottom: 15px;
+        right: 15px;
+    }
 }
 .button-up.is-visible {
     opacity: 1;

@@ -121,6 +121,6 @@ $(document).ready(function(){
     	// 		type : 'inside'
     	// 	}
     	// }
-	});
+  });
 
   });

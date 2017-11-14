@@ -16,8 +16,7 @@
         <header class="header">
             <div class="section__container header__container">
                 <a href="./index.html" class="header__logo">
-                    <span class="header__logo--part1">brand</span>
-                    <span class="header__logo--part2">ly</span>
+                    <img src="./img/header-logo.png" alt="brandly">
                 </a>
                 <button id="menu" class="nav__btn">
                     <span></span>
@@ -53,7 +52,9 @@
         <p class="main-screen__title">UP TO 60% DISCOUNT ON NEW ARRIVALS</p>
         <p class="main-screen__description">TRENDING NEW ITEMS,FROM CREATORS AROUND THE WORLD</p>
         <button class="main-screen__btn">shop now</button>
-        <a href="#" class="scroll-down" address="true"></a>        
+        <a href="#" class="scroll-down" address="true">
+            <span class="ion-chevron-down"></span>
+        </a>        
     </section>
 
     <section class="latest" id="shop">
@@ -320,7 +321,9 @@
         <div class="section__container subscribe__container">
             <p class="subscribe__title">SUBSCRIBE TO OUR NEWSLETTER TO RECEIVE LATEST NEWS AND OFFERS</p>
             <form class="subscribe__form">
-                <input class="subscribe__form--email" type="email" placeholder="email adress">
+                <div class="subscribe__form--email">
+                    <input type="email" placeholder="email adress">
+                </div>
                 <button class="subscribe__form--btn">subscribe</button>
             </form>
         </div>
@@ -337,7 +340,6 @@
     <button id="button-up" class="button-up">
         <span class="ion-chevron-up"></span>
     </button>
-
 
     <script src="./js/jquery-3.2.1.min.js"></script>
     <script src="./js/jquery.fancybox.js"></script>
