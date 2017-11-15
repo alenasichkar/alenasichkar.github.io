@@ -112,16 +112,6 @@ $(document).ready(function(){
         $(this).addClass('slider__sizes--btn--active');
     })
 
-    $('.fancybox').fancybox({
-		// openEffect	: 'elastic',
-    	// closeEffect	: 'elastic',
-
-    	// helpers : {
-    	// 	title : {
-    	// 		type : 'inside'
-    	// 	}
-    	// }
-  });
 
   });
 
