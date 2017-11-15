@@ -124,3 +124,25 @@ $(document).ready(function(){
   });
 
   });
+
+
+  // Active tracking menu
+$(document).ready(function() {
+  $(document).on('scroll', onScroll);
+});
+
+function onScroll(event) {
+  let scrollPos = $(document).scrollTop();
+  let header = $(".header");
+  let headerHeight = header.outerHeight();
+  $('.header__nav--item').each(function() {
+    let currLink = $(this);
+    let refElement = $(currLink.attr('href'));
+    if (refElement.position().top - headerHeight <= scrollPos && refElement.position().top - headerHeight + refElement.height() > scrollPos) {
+      $('.header__nav--item').removeClass('header__nav--item--active');
+      currLink.addClass('header__nav--item--active');
+    } else {
+      currLink.removeClass('header__nav--item--active');
+    }
+  });
+}
